@@ -1,0 +1,134 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace, 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --colordark1: rgb(9, 0, 48);
+    --colordark2: rgb(9, 0, 18);
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    color: var(--colordark1);
+    background-color: azure;
+    background-image: url("download (1).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 0px;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: helvetica, sans-serif;
+}
+
+.tab-container {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 5px 8px;
+}
+
+.tab.current-tab {
+    background-color: rgb(169, 236, 246);
+    border-radius: 4px;
+}
+
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 4rem;
+}
+
+.grant-location-container,
+.loading-container,
+.user-info-container,
+.form-container {
+    display: none; /* Initially hide all sections */
+}
+
+.grant-location-container.active,
+.loading-container.active,
+.user-info-container.active,
+.form-container.active {
+    display: block; /* Show sections when active */
+    text-align: center;
+}
+
+.grant-location-container img,
+.loading-container img,
+.user-info-container img {
+    width: 100px;
+    height: auto;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: rgb(169, 236, 246);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.parameter-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 500px;
+}
+
+.parameter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parameter img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.form-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container .btn {
+    margin-left: 10px;
+}
+
+.loading-container p,
+.grant-location-container p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
